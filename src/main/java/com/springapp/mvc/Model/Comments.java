@@ -11,8 +11,9 @@ public class Comments {
 
     static {
         comments = new ArrayList<>();
-        comments.add(new Comment("Stas", "Davidov", "wefwefew3we", "I love this place, gonna come again"));
-        comments.add(new Comment("Ilya", "Fedorov", "wefwefew3weew", "Dislike"));
+        comments.add(new Comment("Stas", "Davidov", "deviceID_1", "Like it so much. I don't know what, but i do."));
+        comments.add(new Comment("Ilya", "Fedorov", "deviceID_2", "Dislike."));
+        comments.add(new Comment("Vitya", "Komarov", "deviceID_3", "Parapa-pa-pa. I'm loving it!."));
     }
     public static void addComment(Comment comment) {
         comments.add(0, comment);
