@@ -6,6 +6,7 @@ import org.json.JSONException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 
@@ -13,9 +14,11 @@ import java.util.ArrayList;
 public class HelloController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/")
-    public String printWelcome(ModelMap model) {
+    public ModelAndView printWelcome(ModelMap model) {
         model.addAttribute("message", "Hello world!");
-        return "hello";
+        ModelAndView mov = new ModelAndView("hello");
+        mov.addObject("message", "Hello World!");
+        return mov;
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/add", headers = {"Content-type=application/json"})
